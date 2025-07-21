@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me – Joy Batty</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url('images/about-bg.jpg') no-repeat right center fixed;
+    background-size: cover;
+    }
+
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .brighten {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: brightness(1.2); /* 1.0 is normal, increase as needed */
+      z-index: 0;
+  }
+
+
+    #demo-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    }
+
+
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      z-index: 2;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="brighten"></div> <!-- 🔸 Add this line -->
+  <div class="overlay">
+    <canvas id="demo-canvas"></canvas>
+    <div class="message">About Me<br><br>Coming Soon</div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
